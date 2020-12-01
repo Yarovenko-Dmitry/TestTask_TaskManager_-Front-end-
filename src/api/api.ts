@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const instance = axios.create({
   withCredentials: true,
   baseURL: "http://localhost:4000/",
@@ -14,7 +13,6 @@ export const mainRequestProcesses = {
     return instance.get(`processes/`);
   },
   addProcess() {
-    // debugger
     return instance.post(`processes/process/`)
   },
   removeProcess(id: string) {
@@ -25,11 +23,5 @@ export const mainRequestProcesses = {
 export const mainRequestJobs = {
   getJobs() {
     return instance.get(`jobs/`);
-  },
-  // addJobs(processId: string) {
-  //   return instance.post(`jobs/job/` + processId)
-  // },
-  // removeJobs(processId: string) {
-  //   return instance.post(`jobs/job/` + processId);
-  // },
+  }
 }

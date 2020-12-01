@@ -2,7 +2,6 @@ import {Button, Input, Space, Table} from 'antd';
 import React, {useEffect, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {AppRootStateType} from '../app/store';
-import {removeProcessTC} from '../Redux/process-reducer';
 import {SearchOutlined} from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 import {JobType} from '../Redux/jobs-reducer';
@@ -67,7 +66,6 @@ export const JobTable = (props: any) => {
         : '',
     onFilterDropdownVisibleChange: (visible: any) => {
       if (visible) {
-        // setTimeout(() => inputEl.select(), 100);
       }
     },
     render: (text: any) =>
@@ -128,20 +126,7 @@ export const JobTable = (props: any) => {
         return 0;
       },
       ellipsis: true,
-    },
-    // {
-    //   title: 'Remove job',
-    //   dataIndex: 'removeJob',
-    //   key: 'removeJob',
-    //
-    //   render: (text: any, record: any) => <button
-    //     name={'removeJob'}
-    //     onClick={() => {
-    //       // debugger
-    //       removeProcessTC(record._id)
-    //       // console.log('recordKEY ', record.id)
-    //     }}>Remove job</button>
-    // }
+    }
   ];
 
   return (

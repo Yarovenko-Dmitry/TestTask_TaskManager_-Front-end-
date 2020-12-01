@@ -4,16 +4,6 @@ import {useDispatch} from 'react-redux';
 import {addProcessTC, getProcessTC} from '../Redux/process-reducer';
 import {ProcessTable} from '../Components/ProcessTable';
 
-// + просмотр списка процессов
-// + просмотр списка джоб каждого из процессов
-// + создание нового процесса
-// + сортировка процессов по всем полям
-// + поиск джобы по имени
-// + удаление процесса, включая все его джобы
-// + обозначение статуса Process
-// + сохранение и загрузка данных с сервака или localStorage
-// - обновление данных каждый интервал (10 мин)
-
 const App = () => {
   const dispatch = useDispatch();
   const [intervalId, setIntervalId] = useState<number>(0)

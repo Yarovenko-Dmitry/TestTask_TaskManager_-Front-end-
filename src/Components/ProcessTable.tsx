@@ -63,7 +63,6 @@ export const ProcessTable = () => {
     },
   ];
   const onChange = (sorter: any) => {
-    // console.log('params', sorter);
   }
 
   const paintRow = (record: ProcessType, index: any): string => {
