@@ -1,6 +1,8 @@
 import {Dispatch} from 'react';
 import {AddJobActionType, getJobListTC, RemoveJobActionType} from './jobs-reducer';
 import {mainRequestProcesses} from '../api/api';
+import {AppRootStateType} from '../app/store';
+
 
 export type ProcessType = {
   _id: string
@@ -44,7 +46,7 @@ export const getProcessTC = () => {
 }
 
 export const addProcessTC = () => {
-  // return (dispatch: ThunkAction<void, AppRootStateType, unknown, ActionsType>) => {
+  // return async (dispatch: ThunkAction<void, AppRootStateType, unknown, ActionsType>) => {
   return async (dispatch: any) => {
     const res = await mainRequestProcesses.addProcess();
     if (res.status === 201) {
